@@ -1,0 +1,32 @@
+{
+    "name": "klsoft/yii3-user",
+    "type": "library",
+    "description": "The package provides an implementation of the AuthenticationMethodInterface that allows redirection to a protected route after successful authentication",
+    "homepage": "https://github.com/klsoft-web/yii3-user",
+    "keywords": [
+        "authentication",
+        "user",
+        "yii3"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "klsoft/yii3-auth": "^1.0",
+        "yiisoft/user": "^2.3.2",
+        "yiisoft/router": "^4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Klsoft\\Yii3User\\": "src"
+        }
+    },
+    "extra": {
+        "config-plugin-options": {
+            "source-directory": "config"
+        },
+        "config-plugin": {
+            "params": "params.php",
+            "di-web": "di-web.php"
+        }
+    }
+}
