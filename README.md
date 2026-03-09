@@ -44,3 +44,22 @@ public function login(ServerRequestInterface $request): ResponseInterface
     }
 }
 ```
+
+Example configuration for CookieLogin for an HTTP connection:
+
+```php
+use DateInterval;
+use Klsoft\Yii3User\Login\Cookie\CookieLogin;
+
+return [
+    // ...
+    CookieLogin::class => [
+        '__construct()' => [
+            'duration' => $params['yiisoft/user']['cookieLogin']['duration'] !== null ?
+                new DateInterval($params['yiisoft/user']['cookieLogin']['duration']) :
+                null,
+        ],
+        'withCookieSecure()' => [false]
+    ],
+];
+```
