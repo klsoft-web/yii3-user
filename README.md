@@ -1,6 +1,6 @@
 # YII3-USER
 
-The package provides an implementation of the AuthenticationMethodInterface that allows redirection to a protected route after successful authentication.
+The package provides an implementation of the AuthenticationMethodInterface that allows redirection to a protected route after successful authentication. It also releases the CookieLogin class with the extends method withCookieSecure(), which allows you to configure CookieLogin for an HTTP connection.
 
 ## Requirement
 
